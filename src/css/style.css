@@ -1,3 +1,7 @@
 div {
     margin: 10px;
 }
+
+div.dv {
+    max-width: 500px;
+}

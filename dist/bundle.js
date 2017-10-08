@@ -537,7 +537,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 __webpack_require__(5);
 __webpack_require__(8);
 
-(0, _jquery2.default)(".dv").append((0, _jquery2.default)("<center>").append((0, _jquery2.default)("<div>").addClass("container-fluid").append((0, _jquery2.default)("<div>").addClass("row").append((0, _jquery2.default)("<input>").addClass("control-label").attr({ "id": "inputRuc", "placeholder": "introduzca ruc" }))).append((0, _jquery2.default)("<div>").addClass("row").append((0, _jquery2.default)("<button>").addClass("btn btn-primary").attr({ "id": "buttonGenerateDv", "type": "button" }).text("Generar Digito Verificador"))).append((0, _jquery2.default)("<div>").addClass("row").append((0, _jquery2.default)("<input>").attr({ "id": "inputDv" })))));
+(0, _jquery2.default)(".dv").addClass("container p-3 mb-2 bg-info text-white").append((0, _jquery2.default)("<center>").append((0, _jquery2.default)("<h2>").text("Generar Digito Verificador")).append((0, _jquery2.default)("<div>").addClass("row").append((0, _jquery2.default)("<div>").addClass("col-sm-4 col-md-4 col-lg-4 col-xl-4").append((0, _jquery2.default)("<input>").addClass("control-label").attr({ "id": "inputRuc", "placeholder": "introduzca ruc", "style": "width:100%;" }))).append((0, _jquery2.default)("<div>").addClass("col-sm-2 col-md-2 col-lg-2 col-xl-2").append("-")).append((0, _jquery2.default)("<div>").addClass("col-sm-2 col-md-2 col-lg-2 col-xl-2").append((0, _jquery2.default)("<input>").attr({ "id": "inputDv", "disabled": "true", "style": "width:100%;" }))).append((0, _jquery2.default)("<div>").addClass("col-sm-2 col-md-2 col-lg-2 col-xl-2").append((0, _jquery2.default)("<button>").addClass("btn btn-primary").attr({ "id": "buttonGenerateDv", "type": "button" }).text("Gen")))));
 
 (0, _jquery2.default)("#buttonGenerateDv").click(function () {
     var ruc = (0, _jquery2.default)("#inputRuc").val();
@@ -10892,7 +10892,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "div {\n    margin: 10px;\n}", ""]);
+exports.push([module.i, "div {\n    margin: 10px;\n}\n\ndiv.dv {\n    max-width: 500px;\n}", ""]);
 
 // exports
 
