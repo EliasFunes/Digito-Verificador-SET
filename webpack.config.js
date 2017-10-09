@@ -4,7 +4,9 @@ module.exports = {
     entry : "./src/js/app.js",
     output: {
         path : __dirname + "/dist", 
-        filename : "bundle.js"
+        filename : "bundle.js",
+        libraryTarget: "var",
+        library: "dv"
     },
     module : {
         rules : [

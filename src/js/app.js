@@ -23,7 +23,15 @@ $(".dv").addClass("container p-3 mb-2 bg-info text-white")
         )
     )
 
+function generar_dv(ruc){
+    return dv(ruc);
+}
+
 $("#buttonGenerateDv").click(() => {
     var ruc = $("#inputRuc").val()
-    $("#inputDv").val(dv(ruc))
+    $("#inputDv").val(generar_dv(ruc))
 })
+
+module.exports = {
+    generar_dv : generar_dv
+}

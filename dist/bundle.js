@@ -1,3 +1,4 @@
+var dv =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -539,10 +540,18 @@ __webpack_require__(8);
 
 (0, _jquery2.default)(".dv").addClass("container p-3 mb-2 bg-info text-white").append((0, _jquery2.default)("<center>").append((0, _jquery2.default)("<h2>").text("Generar Digito Verificador")).append((0, _jquery2.default)("<div>").addClass("row").append((0, _jquery2.default)("<div>").addClass("col-sm-4 col-md-4 col-lg-4 col-xl-4").append((0, _jquery2.default)("<input>").addClass("control-label").attr({ "id": "inputRuc", "placeholder": "introduzca ruc", "style": "width:100%;" }))).append((0, _jquery2.default)("<div>").addClass("col-sm-2 col-md-2 col-lg-2 col-xl-2").append("-")).append((0, _jquery2.default)("<div>").addClass("col-sm-2 col-md-2 col-lg-2 col-xl-2").append((0, _jquery2.default)("<input>").attr({ "id": "inputDv", "disabled": "true", "style": "width:100%;" }))).append((0, _jquery2.default)("<div>").addClass("col-sm-2 col-md-2 col-lg-2 col-xl-2").append((0, _jquery2.default)("<button>").addClass("btn btn-primary").attr({ "id": "buttonGenerateDv", "type": "button" }).text("Gen")))));
 
+function generar_dv(ruc) {
+    return (0, _digitoVerificador2.default)(ruc);
+}
+
 (0, _jquery2.default)("#buttonGenerateDv").click(function () {
     var ruc = (0, _jquery2.default)("#inputRuc").val();
-    (0, _jquery2.default)("#inputDv").val((0, _digitoVerificador2.default)(ruc));
+    (0, _jquery2.default)("#inputDv").val(generar_dv(ruc));
 });
+
+module.exports = {
+    generar_dv: generar_dv
+};
 
 /***/ }),
 /* 3 */
